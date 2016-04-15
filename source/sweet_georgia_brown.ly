@@ -36,14 +36,14 @@ melody = \relative c' {
 
 harmony = \chordmode {
 
-  d1:7 | d:7 | d:7 | d:7 |
-  g:7  | g:7 | g:7 | g:7 |
+  d1:7~ | d:7~ | d:7~ | d:7 |
+  g:7~  | g:7~ | g:7~ | g:7 |
 
-  c:7  | c:7    | c:7     | c:7 |
-  f    | c:aug7 | f e2:m7 | a:7 |
+  c:7~  | c:7~   | c:7~    | c:7~ |
+  f     | c:aug7 | f e2:m7 | a:7  |
 
-  d1:7   | d:7       | d:7     | d:7      |
-  g:7    | g:7       | g:7     | g2:7 a:7 |
+  d1:7~  | d:7~      | d:7~    | d:7      |
+  g:7~   | g:7~      | g:7~    | g2:7 a:7 |
   d1:m   | a:7       | d:m     | a:7      |
   f2 e:7 | ees:7 d:7 | g:7 c:7 | f:7 e4:7 ees:7 |
 
@@ -63,6 +63,7 @@ bass = \relative c, {
 \score {
   <<
     \new ChordNames {
+      \set ChordNames.midiInstrument = "drawbar organ"
       \set chordChanges = ##t
       \harmony
     }
@@ -86,7 +87,7 @@ bass = \relative c, {
     }
   }
   \midi {
-    \tempo 4 = 165
+    \tempo 4 = 175
   }
 }
 
